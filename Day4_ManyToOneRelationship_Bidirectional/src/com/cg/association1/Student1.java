@@ -1,4 +1,4 @@
-package com.cg.association;
+package com.cg.association1;
 
 import java.io.Serializable;
 
@@ -8,8 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
-@Table(name="Student_Data")
-public class Student implements Serializable
+@Table(name="Stud_Data")
+public class Student1 implements Serializable
 {
 	private static final long serialVersionUID=1L;
 	@Id
@@ -19,8 +19,8 @@ public class Student implements Serializable
 	private double Fees;
 	
 	@ManyToOne
-	@JoinColumn(name="Department_ID")
-	private Department dept;
+	@JoinColumn(name="dept_no")
+	private Department1 Dept;
 	
 	public int getId() {
 		return id;
@@ -40,11 +40,11 @@ public class Student implements Serializable
 	public void setFees(double fees) {
 		Fees = fees;
 	}
-	public Department getDept() {
-		return dept;
+	public Department1 getDept() {
+		return Dept;
 	}
-	public void setDept(Department dept) {
-		this.dept = dept;
+	public void setDept(Department1 dept) {
+		this.Dept = dept;
 	}
 	
 	

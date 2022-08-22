@@ -1,4 +1,4 @@
-package com.cg.association;
+package com.cg.association1;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -13,26 +13,26 @@ public class Test {
 		
 		
 		//Create a new Department
-		Department dept=new Department();
-		dept.setId(10);
-		dept.setName("Mechanical");
+		Department1 Dept=new Department1();
+		Dept.setId(10);
+		Dept.setName("Mechanical");
 		
-		
-		Student s=new Student();
+		//create two instances of employees
+		Student1 s=new Student1();
+		s.setId(20);
 		s.setName("Ram");
 		s.setFees(50000);
-		s.setId(10);
 		
-		Student s1=new Student();
+		Student1 s1=new Student1();
+		s1.setId(30);
 		s1.setName("Sham");
 		s1.setFees(60000);
-		s1.setId(11);
 		
-		dept.addStudent(s);
-		dept.addStudent(s1);
+		Dept.addStudent1(s);
+		Dept.addStudent1(s1);
 		
 		
-		em.persist(dept);
+		em.persist(Dept);
 		
 		
 		System.out.println("Added department along with two students to database");
